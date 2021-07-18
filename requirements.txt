@@ -1,0 +1,6 @@
+openpyxl
+pandas
+selenium
+art
+colorama
+termcolor
