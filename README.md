@@ -1,7 +1,7 @@
 # WhatsApp-Automation-Python
 ## Send Bulk WhatsApp Messages Using This Script In Python
 ### Youtube Video 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/8I-G4faWWrk/0.jpg)](https://www.youtube.com/watch?v=1PYikrM8cPY)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/1PYikrM8cPY/0.jpg)](https://www.youtube.com/watch?v=1PYikrM8cPY)
 ### Installation
 Open terminal and type the following
 ```
