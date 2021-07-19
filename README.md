@@ -13,12 +13,12 @@ Once downloaded, go to the downloaded folder, open command prompt there and type
 pip install -r requirements.txt
 ```
 ### Usage
-1. First open data.xlsx file and enter the name of the contact, their phone number and message to be send\
+1. First open data.xlsx file and enter the name of the contact, their phone number and message to be send
 2. Next, run the script 
 ```
 python main.py 
 ```
-3. Wait for web.whatsapp.com site to open in browser\
+3. Wait for web.whatsapp.com site to open in browser
 4. Once the site is opened and the QR code is visible, scan the QR code using your phone's whatsapp and let the script do the rest of the work.\
 To know how the script works, check out my blog:
 [Click here](https://itsallaboutpython.blogspot.com/2021/07/send-bulk-whatsapp-messages-in-python.html)
