@@ -18,10 +18,10 @@ MESSAGE = 'Message'
 REPLACENAME = '{{name}}'
 URL = 'https://web.whatsapp.com/'
 WAITER_ELEMENT = "landing-title _3-XoE"
-PHONE_NUMER_INPUT = "//*[@id='side']/div[1]/div/label/div/div[2]"
-PERSON_DIV = "//*[@id='pane-side']/div[1]/div/div/div[1]/div/div/div[1]/div/div/img"
-MESSAGE_INPUT = "//*[@id='main']/footer/div[1]/div[2]/div/div[1]/div/div[2]"
-SEND_BUTTON = "//*[@id='main']/footer/div[1]/div[2]/div/div[2]/button"
+PHONE_NUMER_INPUT = "//*[@id='side']/div[1]/div/div/div[2]/div/div[1]"
+PERSON_DIV = "//*[@id='pane-side']/div[1]/div/div/div[13]/div/div/div/div[1]/div/div/div/img"
+MESSAGE_INPUT = "//*[@id='main']/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[1]"
+SEND_BUTTON = "//*[@id='main']/footer/div[1]/div/span[2]/div/div[2]/div[2]/button"
 
 driver = webdriver.Chrome('chromedriver.exe')
 driver.implicitly_wait(10)
@@ -75,13 +75,13 @@ def send_whatsapp_message():
             break
     
     for entry in data:
-        driver.find_element_by_xpath(PHONE_NUMER_INPUT).send_keys(str(entry['PhoneNumber']))
+        driver.find_element("xpath", PHONE_NUMER_INPUT).send_keys(str(entry['PhoneNumber']))
         time.sleep(5)
-        driver.find_element_by_xpath(PHONE_NUMER_INPUT).send_keys(Keys.ENTER)
+        driver.find_element("xpath", PHONE_NUMER_INPUT).send_keys(Keys.ENTER)
         time.sleep(5)
-        driver.find_element_by_xpath(MESSAGE_INPUT).send_keys(str(entry['Message']))
+        driver.find_element("xpath", MESSAGE_INPUT).send_keys(str(entry['Message']))
         time.sleep(5)
-        driver.find_element_by_xpath(SEND_BUTTON).click()
+        driver.find_element("xpath", SEND_BUTTON).click()
         time.sleep(5)
         printData("Successfully send message to {0}, name: {1}".format(str(entry['PhoneNumber']), str(entry['Name'])), 'INFO')
 
